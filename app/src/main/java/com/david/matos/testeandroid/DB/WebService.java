@@ -41,7 +41,7 @@ public class WebService {
 
     private String url = "http://ahead.ycorn.pt/saraws/ws_teste_3.php";
 
-    public void GetUserById(int idUser, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
+    public void GetWS(Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url,
                 null,
                 listener,

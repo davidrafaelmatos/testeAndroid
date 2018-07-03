@@ -30,27 +30,29 @@ public class WS extends AppCompatActivity {
             JSONObject dado;
             JSONArray notas;
             JSONObject nota;
-            Boolean status;
+            String status;
             int countIdade = 0, countNota = 0;
 
             @Override
             public void onResponse(JSONObject response) {
 
                 try {
-                    status = response.getBoolean("status");
+                    status = response.getString("status");
                     if (status.toString().equals("OK")) {
                         try {
                             dados = response.getJSONArray("dados");
                             for (int i = 0; i < dados.length(); i++){
                                 dado = dados.getJSONObject(i);
-                                if (dado.getInt("iadde") > 16){
+                                if (dado.getInt("idade") > 16){
                                     countIdade++;
+                                    System.out.println("idade" + countIdade);
                                 }
                                 notas = dado.getJSONArray("notas");
                                 for (int a = 0; a < notas.length(); a++) {
                                     nota = notas.getJSONObject(i);
                                     if (nota.getInt("nota") > 15) {
                                         countNota++;
+                                        System.out.println("nota" + countNota);
                                     }
                                 }
                             }

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnMapa,btnLista;
+    Button btnMapa,btnLista, btnWS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), listDB.class);
+                startActivity(intent);
+            }
+        });
+
+        btnWS = findViewById(R.id.btnWS);
+        btnWS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WS.class);
                 startActivity(intent);
             }
         });

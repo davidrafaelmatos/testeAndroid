@@ -4,4 +4,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="txtMaps">Maps</string>
     <string name="txtList">List</string>
+    <string name="txtidade">Quantidade de pessoas com idade inferior a 16 anos</string>
+    <string name="txtNotas">quantidade de disciplinas com notas superior a 15 valores</string>
 </resources>
